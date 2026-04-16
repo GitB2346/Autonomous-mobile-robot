@@ -1,0 +1,21 @@
+twist_mux:
+  ros__parameters:
+    topics:
+      navigation:
+        topic: cmd_vel
+        timeout: 0.5
+        priority: 10
+      teleop:
+        topic: teleop/cmd_vel
+        timeout: 0.5
+        priority: 5
+      emergency_stop:
+        topic: emergency_stop/cmd_vel
+        timeout: 0.1
+        priority: 1
+    output_topic: cmd_vel_mux
+    output_frame: base_link
+    enable_logging: true
+    enable_statistics: true
+    statistics_period: 1.0
+    enable_dynamic_reconfiguration: true  
